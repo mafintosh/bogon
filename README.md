@@ -19,7 +19,7 @@ console.log(bogon('8.8.8.8')) // false
 ```
 
 As a utility it also exposes an `isPrivate` helper
-to detect if a bogon IP is a private IP addres on a local network.
+to detect if a bogon IP is a private IP address on a local network.
 
 ``` js
 console.log(bogon.isPrivate('192.168.0.1')) // true
