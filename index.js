@@ -34,6 +34,10 @@ function isPrivate (ip) {
 }
 
 function toNumber (ip) {
-  const [a, b, c, d] = ip.split('.')
-  return 16777216 * parseInt(a, 10) + 65536 * parseInt(b, 10) + 256 * parseInt(c, 10) + parseInt(d, 10)
+  const [a, b, c, d] = ip.split('.').map(toInt)
+  return 0x1000000 * a + 0x10000 * b + 0x100 * c + d
+}
+
+function toInt (n) {
+  return parseInt(n, 10)
 }
