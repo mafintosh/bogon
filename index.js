@@ -4,13 +4,13 @@ const b4a = require('b4a')
 const c = require('compact-encoding')
 const net = require('compact-encoding-net')
 
-module.exports = function isBogon (ip) {
+module.exports = exports = function isBogon (ip) {
   return isBogonIP(ensureBuffer(ip))
 }
 
-module.exports.isBogon = module.exports
+exports.isBogon = exports
 
-module.exports.isPrivate = function isPrivate (ip) {
+exports.isPrivate = function isPrivate (ip) {
   return isPrivateIP(ensureBuffer(ip))
 }
 
