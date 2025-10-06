@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier --write .",
-    "lint": "prettier --check .",
-    "test": "brittle test.mjs"
+    "test": "prettier --check . && brittle test.mjs"
   },
   "dependencies": {
     "compact-encoding": "^2.11.0",
