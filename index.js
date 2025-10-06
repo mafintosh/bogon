@@ -110,17 +110,9 @@ function isReservedIPv6(ip) {
       ip[6] === 0 &&
       ip[7] === 0) ||
     // 2001:10::/28 Overlay routable cryptographic hash identifiers (ORCHID)
-    (ip[0] === 0x20 &&
-      ip[1] === 0x01 &&
-      ip[2] === 0 &&
-      ip[3] >= 0x10 &&
-      ip[3] <= 0x1f) ||
+    (ip[0] === 0x20 && ip[1] === 0x01 && ip[2] === 0 && ip[3] >= 0x10 && ip[3] <= 0x1f) ||
     // 2001:20::/28 Overlay routable cryptographic hash identifiers version 2 (ORCHIDv2)
-    (ip[0] === 0x20 &&
-      ip[1] === 0x01 &&
-      ip[2] === 0 &&
-      ip[3] >= 0x20 &&
-      ip[3] <= 0x2f) ||
+    (ip[0] === 0x20 && ip[1] === 0x01 && ip[2] === 0 && ip[3] >= 0x20 && ip[3] <= 0x2f) ||
     // 2001:db8::/32 Documentation prefix
     (ip[0] === 0x20 && ip[1] === 0x01 && ip[2] === 0x0d && ip[3] === 0xb8) ||
     // fc00::/7 Unique local addresses (ULA)
