@@ -14,6 +14,10 @@ exports.isPrivate = function isPrivate (ip) {
   return isPrivateIP(ensureBuffer(ip))
 }
 
+exports.isReserved = function isReserved (ip) {
+  return isReservedIP(ensureBuffer(ip))
+}
+
 function isBogonIP (ip) {
   return isPrivateIP(ip) || isReservedIP(ip)
 }
