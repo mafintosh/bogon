@@ -2,7 +2,6 @@
 
 const b4a = require('b4a')
 const c = require('compact-encoding')
-const net = require('compact-encoding-net')
 
 module.exports = exports = function isBogon (ip) {
   return isBogonIP(ensureBuffer(ip))
@@ -110,8 +109,8 @@ const state = c.state(0, 0, b4a.allocUnsafe(1 /* family */ + 16))
 function ensureBuffer (ip) {
   if (b4a.isBuffer(ip)) return ip
 
-  net.ip.preencode(state, ip)
-  net.ip.encode(state, ip)
+  c.ip.preencode(state, ip)
+  c.ip.encode(state, ip)
 
   const buffer = state.buffer.subarray(1 /* family */, state.end)
 
