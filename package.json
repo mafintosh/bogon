@@ -7,7 +7,7 @@
     "test": "standard && brittle test.mjs"
   },
   "dependencies": {
-    "compact-encoding": "^2.11.0",
+    "compact-encoding": "^3.0.0",
     "compact-encoding-net": "^1.2.0"
   },
   "devDependencies": {
